@@ -24,6 +24,7 @@ defmodule RGBMatrix.Animation do
           | __MODULE__.SolidColor
           | __MODULE__.Breathing
           | __MODULE__.SolidReactive
+          | __MODULE__.Simon
 
   @callback new(leds :: [LED.t()], config :: Config.t()) :: animation_state
   @callback render(state :: animation_state, config :: Config.t()) ::
@@ -44,7 +45,8 @@ defmodule RGBMatrix.Animation do
       __MODULE__.RandomKeypresses,
       __MODULE__.SolidColor,
       __MODULE__.Breathing,
-      __MODULE__.SolidReactive
+      __MODULE__.SolidReactive,
+      __MODULE__.Simon
     ]
   end
 
